@@ -104,7 +104,6 @@ class NextHourForecast(Weather):
             summary = summaries[0]
             self.start_datetime = arrow.get(summary.get('startTime')).to(timezone).for_json()
             self.precip_type = summary.get('condition') # Note this is called "condition" in the API
-            self.conditions = self.conditions_for_code(self.condition_code)
             self.precip_chance = summary.get('precipitationChance')
             self.precip_intensity = summary.get('precipitationIntensity')
             self.minutes = [MinuteForecast(m, timezone) for m in data.get('minutes')]

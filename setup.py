@@ -5,12 +5,11 @@ with open("README.md", "r", encoding = "utf-8") as fh:
 
 setup(
     name='weatherkit-python',
-    version='1.0',
+    version='1.0.1',
     packages=['weatherkit'],
     license='MIT',
     description='A Python interface for Apple\'s WeatherKit APIs',
     url='https://github.com/greencoder/weatherkit-python',
-    download_url='https://github.com/greencoder/weatherkit-python/archive/1.0.tar.gz',
     author='Scott Newman',
     author_email='snewman18@gmail.com',
     long_description=long_description,

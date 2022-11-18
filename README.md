@@ -23,6 +23,12 @@ The following dependencies are installed with the library:
 
 The library will take care of JWT generation for you since it's such a pain. The expiration time for the token is one hour after generation.
 
+You will need to provide your Developer Team ID, Service ID, Key ID, and Private Key to the library. This is by far the most challenging part, but these sites had instructions that were very helpful:
+
+* https://dev.iachieved.it/iachievedit/weatherkit-rest-api/
+* https://allthecode.co/blog/post/setting-up-weatherkit-rest-api-in-node-js
+* https://gist.github.com/pizzapanther/8a29b5462c786f0bb94a257ea535cc0f
+
 # Dates and Timezones
 
 The library will convert all datetime values to the timezone of your choosing. You can specify `UTC` to return GMT datetimes. All values are returned in ISO8106 format.
@@ -78,7 +84,7 @@ The Apple APIs return `conditionCode` values that are automatically mapped to hu
 |Tornado|Tornado|
 |TropicalStorm|Tropical Storm|
 
-# Precip Types
+# Precipitation Types
 
 The `DailyForecast`, `NextHourForecast`, and `HourlyForecast` objects have a `precip_type` string that can have the following values:
 
