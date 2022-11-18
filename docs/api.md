@@ -1,0 +1,172 @@
+
+# WeatherKit Objects
+There are six objects that are part of the WeatherKit response:
+
+* `WeatherKitResponse`
+* `DailyForecast`
+* `HourlyForecast`
+* `NextHourForecast`
+* `MinuteForecast`
+* `CurrentConditions`
+
+## WeatherKit Response
+
+This is the container object that holds the nested objects as properties for each dataset in the response.
+```
+response.daily_forecast
+response.hourly_forecast
+response.next_hour_forecast
+response.current_conditions
+```
+
+## Daily Forecast
+
+```
+daily_forecast.start_datetime
+daily_forecast.end_datetime
+daily_forecast.condition_code
+daily_forecast.conditions
+daily_forecast.max_uv_index
+daily_forecast.moon_phase
+daily_forecast.precip_amount_mm
+daily_forecast.precip_amount_in
+daily_forecast.precip_chance
+daily_forecast.precip_type
+daily_forecast.snowfall_amount_mm
+daily_forecast.snowfall_amount_in
+daily_forecast.sunrise
+daily_forecast.sunset
+daily_forecast.temperature_max_c
+daily_forecast.temperature_min_c
+daily_forecast.temperature_max_f
+daily_forecast.temperature_min_f
+
+daily_forecast.daytime_cloud_cover
+daily_forecast.daytime_condition_code
+daily_forecast.daytime_conditions
+daily_forecast.daytime_humidity
+daily_forecast.daytime_precip_amount_mm
+daily_forecast.daytime_precip_amount_in
+daily_forecast.daytime_precip_chance
+daily_forecast.daytime_precip_type
+daily_forecast.daytime_snowfall_amount_mm
+daily_forecast.daytime_snowfall_amount_in
+daily_forecast.daytime_wind_degrees
+daily_forecast.daytime_wind_direction
+daily_forecast.daytime_wind_speed_avg_kmh
+daily_forecast.daytime_wind_speed_avg_mph
+
+daily_forecast.overnight_cloud_cover
+daily_forecast.overnight_condition_code
+daily_forecast.overnight_conditions
+daily_forecast.overnight_humidity
+daily_forecast.overnight_precip_amount_mm
+daily_forecast.overnight_precip_amount_in
+daily_forecast.overnight_precip_chance
+daily_forecast.overnight_precip_type
+daily_forecast.overnight_snowfall_amount_mm
+daily_forecast.overnight_snowfall_amount_in
+daily_forecast.overnight_wind_degrees
+daily_forecast.overnight_wind_direction
+daily_forecast.overnight_wind_speed_avg_kmh
+daily_forecast.overnight_wind_speed_avg_mph
+
+daily_forecast.nighttime_condition_code
+daily_forecast.nighttime_conditions
+daily_forecast.nighttime_humidity
+daily_forecast.nighttime_precip_amount_mm
+daily_forecast.nighttime_precip_amount_in
+daily_forecast.nighttime_precip_chance
+daily_forecast.nighttime_precip_type
+daily_forecast.nighttime_snowfall_amount_mm
+daily_forecast.nighttime_snowfall_amount_in
+daily_forecast.nighttime_wind_degrees
+daily_forecast.nighttime_wind_direction
+daily_forecast.nighttime_wind_speed_avg_kmh
+daily_forecast.nighttime_wind_speed_avg_mph
+```
+
+## Hourly Forecast
+
+```
+hourly_forecast.start_datetime
+hourly_forecast.end_datetime
+hourly_forecast.cloud_cover
+hourly_forecast.condition_code
+hourly_forecast.conditions
+hourly_forecast.is_daylight
+hourly_forecast.humidity
+hourly_forecast.precip_amount_mm
+hourly_forecast.precip_amount_inches
+hourly_forecast.precip_intensity
+hourly_forecast.precip_chance
+hourly_forecast.precip_type
+hourly_forecast.pressure_mb
+hourly_forecast.pressure_trend
+hourly_forecast.snowfall_intensity
+hourly_forecast.snowfall_amount_mm
+hourly_forecast.snowfall_amount_inches
+hourly_forecast.temperature_c
+hourly_forecast.temperature_f
+hourly_forecast.temperature_feels_like_c
+hourly_forecast.temperature_feels_like_f
+hourly_forecast.temperature_dew_point_c
+hourly_forecast.temperature_dew_point_f
+hourly_forecast.uv_index
+hourly_forecast.visibility_meters
+hourly_forecast.visibility_miles
+hourly_forecast.wind_degrees
+hourly_forecast.wind_direction
+hourly_forecast.wind_gust_kmh
+hourly_forecast.wind_gust_mph
+hourly_forecast.wind_speed_kmh
+hourly_forecast.wind_speed_mph
+```
+
+## Next Hour Forecast
+
+```
+next_hour_forecast.start_datetime
+next_hour_forecast.precip_type
+next_hour_forecast.precip_chance
+next_hour_forecast.precip_intensity
+next_hour_forecast.minutes
+```
+
+_Note: `next_hour_forecast.minutes` is a list of `ForecastMinute` objects_
+
+## Forecast Minute
+
+```
+minute.start_datetime
+minute.precip_chance
+minute.precip_intensity
+```
+
+## Current Conditions
+
+```
+current_conditions.cloud_cover
+current_conditions.condition_code
+current_conditions.conditions
+current_conditions.is_daylight
+current_conditions.humidity
+current_conditions.precip_intensity
+current_conditions.pressure_mb
+current_conditions.pressure_trend
+current_conditions.temperature_c
+current_conditions.temperature_f
+current_conditions.temperature_feels_like_c
+current_conditions.temperature_feels_like_f
+current_conditions.temperature_dew_point_c
+current_conditions.temperature_dew_point_f
+current_conditions.uv_index
+current_conditions.visibility_meters
+current_conditions.visibility_miles
+current_conditions.wind_degrees
+current_conditions.wind_direction
+current_conditions.wind_gust_kmh
+current_conditions.wind_gust_mph
+current_conditions.wind_speed_kmh
+current_conditions.wind_speed_mph
+```
